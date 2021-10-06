@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="9pr-ri-ROZ">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Oai-HJ-M9U" customClass="HomeViewController" customModule="CoordinatorsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TDB-fQ-1YV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exo-y8-Zd8">
+                                <rect key="frame" x="173" y="250" width="68" height="30"/>
+                                <state key="normal" title="Show Info"/>
+                                <connections>
+                                    <action selector="tappedInfoButtonWithSender:" destination="Oai-HJ-M9U" eventType="touchUpInside" id="KYV-ki-vV1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-7d-ben">
+                                <rect key="frame" x="152.5" y="309" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="4N4-ZV-ujU"/>
+                                </constraints>
+                                <state key="normal" title="Show Copyright"/>
+                                <connections>
+                                    <action selector="tappedCopyrightButtonWithSender:" destination="Oai-HJ-M9U" eventType="touchUpInside" id="gqo-Wa-0Aw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-oK-Dq5">
+                                <rect key="frame" x="152.5" y="373" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="ghB-gi-Qud"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="tappedLogoutButtonWithSender:" destination="Oai-HJ-M9U" eventType="touchUpInside" id="157-ft-6HC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m0k-Du-6zk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Exo-y8-Zd8" firstAttribute="centerX" secondItem="4ZZ-7d-ben" secondAttribute="centerX" id="DDs-Ub-HGj"/>
+                            <constraint firstItem="4ZZ-7d-ben" firstAttribute="centerX" secondItem="r9B-oK-Dq5" secondAttribute="centerX" id="Ol8-aY-fCf"/>
+                            <constraint firstItem="r9B-oK-Dq5" firstAttribute="top" secondItem="4ZZ-7d-ben" secondAttribute="bottom" constant="34" id="TfT-0M-KQn"/>
+                            <constraint firstItem="Exo-y8-Zd8" firstAttribute="centerX" secondItem="m0k-Du-6zk" secondAttribute="centerX" id="XNi-LL-wBC"/>
+                            <constraint firstItem="Exo-y8-Zd8" firstAttribute="top" secondItem="m0k-Du-6zk" secondAttribute="top" constant="206" id="caI-CN-ZLy"/>
+                            <constraint firstItem="4ZZ-7d-ben" firstAttribute="top" secondItem="Exo-y8-Zd8" secondAttribute="bottom" constant="29" id="iYW-0C-sBe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyrightButton" destination="4ZZ-7d-ben" id="jBr-yX-dao"/>
+                        <outlet property="infoButton" destination="Exo-y8-Zd8" id="qMh-Ms-5MS"/>
+                        <outlet property="logoutButton" destination="r9B-oK-Dq5" id="WVA-Et-rkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0R-r3-mrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155" y="117"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="5hP-jb-b3G">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="EnP-SD-q2m" customClass="InfoViewController" customModule="CoordinatorsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXe-NJ-2by">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faL-yf-HRr">
+                                <rect key="frame" x="20" y="194" width="374" height="406"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum sodales sagittis. Mauris sed magna a metus dapibus mattis. Donec euismod, enim vitae fringilla egestas, nisi sapien tincidunt ante, vel feugiat eros odio eget libero. Donec rhoncus tincidunt est quis fringilla. Vestibulum quis urna est. Praesent vitae velit a ligula lacinia tempor. Nam semper neque vitae velit volutpat malesuada. Maecenas vel accumsan dui. Mauris porta nibh dolor, sit amet sodales dolor faucibus eu. Proin egestas congue sem ut commodo. Nam vel diam tincidunt, vestibulum eros volutpat, feugiat dui. Nulla sodales pretium leo, eu aliquet nisi vulputate eu. Sed eleifend est in sem maximus, eu sollicitudin odio convallis. Suspendisse condimentum tincidunt nulla. Sed tincidunt viverra mattis.
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZv-0o-y9j">
+                                <rect key="frame" x="24" y="118" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="tappedCloseWithSender:" destination="EnP-SD-q2m" eventType="touchUpInside" id="Weh-KX-xHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="apn-8L-76l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sZv-0o-y9j" firstAttribute="top" secondItem="apn-8L-76l" secondAttribute="top" constant="74" id="2bY-rp-br3"/>
+                            <constraint firstItem="faL-yf-HRr" firstAttribute="top" secondItem="sZv-0o-y9j" secondAttribute="bottom" constant="46" id="6j2-6d-nyl"/>
+                            <constraint firstItem="apn-8L-76l" firstAttribute="trailing" secondItem="faL-yf-HRr" secondAttribute="trailing" constant="20" id="Vak-bQ-8fd"/>
+                            <constraint firstItem="sZv-0o-y9j" firstAttribute="leading" secondItem="apn-8L-76l" secondAttribute="leading" constant="24" id="qWd-Se-P0p"/>
+                            <constraint firstItem="faL-yf-HRr" firstAttribute="leading" secondItem="apn-8L-76l" secondAttribute="leading" constant="20" id="wtM-NN-ZQI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCK-rT-8rc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550.72463768115949" y="116.51785714285714"/>
+        </scene>
+        <!--Copyright View Controller-->
+        <scene sceneID="9DM-yA-keI">
+            <objects>
+                <viewController storyboardIdentifier="CopyrightViewController" id="iVb-En-6f1" customClass="CopyrightViewController" customModule="CoordinatorsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0FN-7J-lXq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright Andrei Ionescu 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFd-Ff-e3e">
+                                <rect key="frame" x="89.5" y="442.5" width="235" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1t-hK-FJC">
+                                <rect key="frame" x="20" y="118" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="tappedCloseWithSender:" destination="iVb-En-6f1" eventType="touchUpInside" id="j1F-Q8-KB4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qgk-T9-vaY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1t-hK-FJC" firstAttribute="top" secondItem="Qgk-T9-vaY" secondAttribute="top" constant="74" id="C6i-vq-KNm"/>
+                            <constraint firstItem="PFd-Ff-e3e" firstAttribute="centerY" secondItem="Qgk-T9-vaY" secondAttribute="centerY" id="KhN-3z-Ktu"/>
+                            <constraint firstItem="PFd-Ff-e3e" firstAttribute="centerX" secondItem="Qgk-T9-vaY" secondAttribute="centerX" id="abN-zH-bCG"/>
+                            <constraint firstItem="o1t-hK-FJC" firstAttribute="leading" secondItem="Qgk-T9-vaY" secondAttribute="leading" constant="20" id="pYw-dX-xCy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4D-wa-UnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
